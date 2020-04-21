@@ -10,17 +10,24 @@ public class Main {
 
     public static void main(String[] args) {
         List<User> users = Arrays.asList(
-                new User("Nicole", 38),
-                new User("Alex", 20),
-                new User("", 35),
-                new User("Michael", 10));
-        Map<Integer, Integer> numbersMap= new HashMap<>();
+                new User("Nicole", "Smith", 38, 1),
+                new User("Alex", "Williams", 20, 2),
+                new User("", "Smith", 35, 3),
+                new User("Michael", "Williams", 10, 4));
+
+        Map<Integer, Integer> numbersMap = new HashMap<>();
         numbersMap.put(1, 10);
         numbersMap.put(2, 20);
         numbersMap.put(3, 30);
 
         List<Integer> numbersList = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
         List<String> names = Arrays.asList("jane", "sasha", "ivan", "", "marry");
+        List<User> humans = Arrays.asList(
+                new User("Jane", Arrays.asList("Buddy", "Lucy")),
+                new User("Sasha", Arrays.asList("Frankie", "Rosie")),
+                new User("Ivan", Arrays.asList("Simba", "Tilly")));
+
+        int[][] arr = {{1, 2}, {3, 4}, {5, 6}};
 
         ComparatorAndLambda comparatorAndLambda = new ComparatorAndLambda();
         comparatorAndLambda.getText("Before sort", users);
@@ -50,5 +57,13 @@ public class Main {
         CollectToCollections collectToCollections = new CollectToCollections();
         collectToCollections.getEvenNumbersByCollect(numbersList);
         collectToCollections.getIsNotEmptyNameBySet(names);
+
+        CollectGrouping collectGrouping = new CollectGrouping();
+        collectGrouping.getGroupingBySurnameAndCollect(users);
+        collectGrouping.getGroupingAndMappingBySurname(users);
+
+        FlatMapMethods flatMapMethods = new FlatMapMethods();
+        flatMapMethods.getPetsListByFlatMap(humans);
+        flatMapMethods.getSingleDimensionArrayByFlatMapInt(arr);
     }
 }

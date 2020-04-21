@@ -26,6 +26,7 @@ public class StreamAndMap {
             }
         }
     }
+
     public void getUserByMapAndFilter(List<User> users) {
         users.stream()
                 .filter(i -> i.getAge()>20)
