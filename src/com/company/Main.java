@@ -31,11 +31,9 @@ public class Main {
 
         ComparatorAndLambda comparatorAndLambda = new ComparatorAndLambda();
         comparatorAndLambda.getText("Before sort", users);
-        comparatorAndLambda.getSortByComparator(users);
         comparatorAndLambda.getSortByLambda(users);
 
         LambdaInsteadOfForEach lambdaInsteadOfForEach = new LambdaInsteadOfForEach();
-        lambdaInsteadOfForEach.getForEachByEntrySetMap(numbersMap);
         lambdaInsteadOfForEach.getForEachWithTermsByLambda(users);
 
         MyCustomPredicate predicate = x -> x < 10;
@@ -47,23 +45,25 @@ public class Main {
 
         FilterAndForEach filter = new FilterAndForEach();
         filter.getFilter(numbersList);
-        filter.getCountName(users);
         filter.getCountNameByFilter(users);
 
         StreamAndMap streamAndMap = new StreamAndMap();
-        streamAndMap.getUseMap(numbersList);
         streamAndMap.getUserByMapAndFilter(users);
 
         CollectToCollections collectToCollections = new CollectToCollections();
         collectToCollections.getEvenNumbersByCollect(numbersList);
-        collectToCollections.getIsNotEmptyNameBySet(names);
 
         CollectGrouping collectGrouping = new CollectGrouping();
-        collectGrouping.getGroupingBySurnameAndCollect(users);
         collectGrouping.getGroupingAndMappingBySurname(users);
 
         FlatMapMethods flatMapMethods = new FlatMapMethods();
-        flatMapMethods.getPetsListByFlatMap(humans);
         flatMapMethods.getSingleDimensionArrayByFlatMapInt(arr);
+
+        StreamAndFind streamAndFind = new StreamAndFind();
+        streamAndFind.getFindAnyWithFilterByParallelStream(names);
+
+        StreamAndMatch streamAndMatch = new StreamAndMatch();
+        streamAndMatch.getNoneMatch(numbersList);
+
     }
 }
