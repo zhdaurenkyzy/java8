@@ -1,9 +1,6 @@
 package com.company;
 
-import com.company.myClass.ComparatorAndLambda;
-import com.company.myClass.FilterAndForEach;
-import com.company.myClass.LambdaInsteadOfForEach;
-import com.company.myClass.User;
+import com.company.myClass.*;
 import com.company.myInterface.MyCustomPredicate;
 import com.company.myInterface.UserFactory;
 
@@ -13,16 +10,17 @@ public class Main {
 
     public static void main(String[] args) {
         List<User> users = Arrays.asList(
-                new User("Nicole", 18),
+                new User("Nicole", 38),
                 new User("Alex", 20),
-                new User("Michael", 35));
-        Map<Integer, Integer> numbers = new HashMap<>();
-        numbers.put(1, 10);
-        numbers.put(2, 20);
-        numbers.put(3, 30);
+                new User("", 35),
+                new User("Michael", 10));
+        Map<Integer, Integer> numbersMap= new HashMap<>();
+        numbersMap.put(1, 10);
+        numbersMap.put(2, 20);
+        numbersMap.put(3, 30);
 
         List<Integer> numbersList = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-        List<String> names = Arrays.asList("Jane", "Sasha", "Ivan", "Nicole", "Marry");
+        List<String> names = Arrays.asList("jane", "sasha", "ivan", "", "marry");
 
         ComparatorAndLambda comparatorAndLambda = new ComparatorAndLambda();
         comparatorAndLambda.getText("Before sort", users);
@@ -30,7 +28,7 @@ public class Main {
         comparatorAndLambda.getSortByLambda(users);
 
         LambdaInsteadOfForEach lambdaInsteadOfForEach = new LambdaInsteadOfForEach();
-        lambdaInsteadOfForEach.getForEachByEntrySetMap(numbers);
+        lambdaInsteadOfForEach.getForEachByEntrySetMap(numbersMap);
         lambdaInsteadOfForEach.getForEachWithTermsByLambda(users);
 
         MyCustomPredicate predicate = x -> x < 10;
@@ -44,6 +42,13 @@ public class Main {
         filter.getFilter(numbersList);
         filter.getCountName(users);
         filter.getCountNameByFilter(users);
-    }
 
+        StreamAndMap streamAndMap = new StreamAndMap();
+        streamAndMap.getUseMap(numbersList);
+        streamAndMap.getUserByMapAndFilter(users);
+
+        CollectToCollections collectToCollections = new CollectToCollections();
+        collectToCollections.getEvenNumbersByCollect(numbersList);
+        collectToCollections.getIsNotEmptyNameBySet(names);
+    }
 }
