@@ -65,5 +65,17 @@ public class Main {
         StreamAndMatch streamAndMatch = new StreamAndMatch();
         streamAndMatch.getNoneMatch(numbersList);
 
+        StreamAndReduce streamAndReduce = new StreamAndReduce();
+        streamAndReduce.getSumWithIdentityAndCombiner(numbersList);
+
+        DebugWithPeek debugWithPeek = new DebugWithPeek();
+        debugWithPeek.getDebugWithMethodReference(numbersList);
+
+        LimitAndSkip limitAndSkip = new LimitAndSkip();
+        limitAndSkip.getSkipExceeds(numbersList);
+
+        PrimitivesStream primitivesStream = new PrimitivesStream();
+        primitivesStream.getAverage();
     }
+
 }
