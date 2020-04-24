@@ -21,6 +21,9 @@ public class User {
         this.friendsAmount = friendsAmount;
     }
 
+    public User() {
+    }
+
     public User(String name, List<String> pets) {
         this.name = name;
         this.pets = pets;
