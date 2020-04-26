@@ -46,36 +46,6 @@ public class Main {
         FilterAndForEach filter = new FilterAndForEach();
         filter.getFilter(numbersList);
         filter.getCountNameByFilter(users);
-
-        StreamAndMap streamAndMap = new StreamAndMap();
-        streamAndMap.getUserByMapAndFilter(users);
-
-        CollectToCollections collectToCollections = new CollectToCollections();
-        collectToCollections.getEvenNumbersByCollect(numbersList);
-
-        CollectGrouping collectGrouping = new CollectGrouping();
-        collectGrouping.getGroupingAndMappingBySurname(users);
-
-        FlatMapMethods flatMapMethods = new FlatMapMethods();
-        flatMapMethods.getSingleDimensionArrayByFlatMapInt(arr);
-
-        StreamAndFind streamAndFind = new StreamAndFind();
-        streamAndFind.getFindAnyWithFilterByParallelStream(names);
-
-        StreamAndMatch streamAndMatch = new StreamAndMatch();
-        streamAndMatch.getNoneMatch(numbersList);
-
-        StreamAndReduce streamAndReduce = new StreamAndReduce();
-        streamAndReduce.getSumWithIdentityAndCombiner(numbersList);
-
-        DebugWithPeek debugWithPeek = new DebugWithPeek();
-        debugWithPeek.getDebugWithMethodReference(numbersList);
-
-        LimitAndSkip limitAndSkip = new LimitAndSkip();
-        limitAndSkip.getSkipExceeds(numbersList);
-
-        PrimitivesStream primitivesStream = new PrimitivesStream();
-        primitivesStream.getAverage();
     }
 
 }
